@@ -81,7 +81,7 @@ class MetronomeState extends State<MetronomeClass> {
               _increaseTempo((updateDetails.primaryDelta / 6).floor());
             },
             onHorizontalDragUpdate: (DragUpdateDetails updateDetails) {
-              _increaseTempo((updateDetails.primaryDelta / 6).floor());
+              _increaseTempo(-(updateDetails.primaryDelta / 6).floor());
             },
 
             //SizedBox.expand means the button takes up the entire screen
