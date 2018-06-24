@@ -1,8 +1,10 @@
-import 'dart:async';
+import 'dart:async' show StreamSubscription;
 
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:quiver/async.dart';
+import 'package:flutter/material.dart'
+    show BuildContext, Color, Colors, DragStartDetails, DragUpdateDetails, FlatButton, GestureDetector, MaterialApp, Scaffold, SizedBox, State, StatefulWidget, StatelessWidget, Text, TextStyle, Widget, runApp;
+import 'package:flutter/services.dart' show SystemSound, SystemSoundType;
+import 'package:quiver/async.dart' show Metronome;
+import 'package:recase/recase.dart' show ReCase;
 
 void main() => runApp(new MyApp());
 
@@ -22,18 +24,59 @@ class MetronomeClass extends StatefulWidget {
 }
 
 class MetronomeState extends State<MetronomeClass> {
+  var sounds = ['tamborine', 'bottle', 'click'];
+  int _soundIndex = 0;
+
   static int tempo = 100;
 
   //Initial Style
   Color _bkgColor = Colors.red;
   Color _txtColor = Colors.white;
-  final _biggerFont = const TextStyle(fontSize: 175.0);
+  TextStyle _biggerFont = TextStyle(fontSize: 175.0);
+
+  String displayTxt = '$tempo';
+  ReCase rc;
 
   bool _isPlaying = false;
+  bool _modeMetronome = true;
 
   Metronome _metronome =
-      new Metronome.epoch(new Duration(milliseconds: (60000 / tempo).round()));
+  new Metronome.epoch(new Duration(milliseconds: (60000 / tempo).round()));
   StreamSubscription<DateTime> _subscription;
+
+  void _toggleMode() {
+    if (_modeMetronome) {
+      _modeMetronome = false;
+      if (_isPlaying) {
+        _subscription.cancel();
+        _isPlaying = false;
+      }
+
+      setState(() {
+        _bkgColor = Colors.blue[800];
+        _biggerFont = TextStyle(fontSize: 60.0);
+        rc = ReCase(sounds[_soundIndex]);
+        displayTxt = rc.pascalCase;
+      });
+    }
+    else {
+      _modeMetronome = true;
+
+      setState(() {
+        _bkgColor = Colors.red;
+        _biggerFont = TextStyle(fontSize: 175.0);
+        displayTxt = '$tempo';
+      });
+    }
+  }
+
+  void _switchSound() {
+    _soundIndex = ++_soundIndex % 3;
+    setState(() {
+      rc = ReCase(sounds[_soundIndex]);
+      displayTxt = rc.pascalCase;
+    });
+  }
 
   void _play() {
     setState(() {
@@ -56,10 +99,12 @@ class MetronomeState extends State<MetronomeClass> {
     if (!((tempo > 299 && decrease < 0) || (tempo < 41 && decrease > 0))) {
       setState(() {
         tempo -= (decrease / 4).ceil();
+        displayTxt = '$tempo';
       });
       _metronome = new Metronome.epoch(
           new Duration(milliseconds: (60000 / tempo).round()));
 
+      //Dynamically increases the tempo of the beat
       if (_isPlaying) {
         _subscription.cancel();
         _subscription =
@@ -73,22 +118,35 @@ class MetronomeState extends State<MetronomeClass> {
     return new MaterialApp(
       title: 'Metronome',
       home: new Scaffold(
-          //Red or green depending on the state of playing
+        //Red or green depending on the state of playing
           backgroundColor: _bkgColor,
           body: new GestureDetector(
+
+            onVerticalDragStart: (DragStartDetails startDetails) {
+              if (!_modeMetronome) _switchSound;
+            },
+
+            onHorizontalDragStart: (DragStartDetails startDetails) {
+              if (!_modeMetronome) _switchSound;
+            },
+
             //Increase or decrease tempo based on swipe direction
             onVerticalDragUpdate: (DragUpdateDetails updateDetails) {
-              _increaseTempo((updateDetails.primaryDelta / 6).floor());
+              if (_modeMetronome)
+                _increaseTempo((updateDetails.primaryDelta / 6).floor());
             },
             onHorizontalDragUpdate: (DragUpdateDetails updateDetails) {
-              _increaseTempo(-(updateDetails.primaryDelta / 6).floor());
+              if (_modeMetronome)
+                _increaseTempo((updateDetails.primaryDelta / 6).floor());
             },
+
+            onLongPress: _toggleMode,
 
             //SizedBox.expand means the button takes up the entire screen
             child: new SizedBox.expand(
               child: new FlatButton(
                 child: new Text(
-                  "$tempo",
+                  displayTxt,
                   style: _biggerFont,
                 ),
 
@@ -97,7 +155,7 @@ class MetronomeState extends State<MetronomeClass> {
 
                 //Plays or pauses the metronome
                 onPressed: () {
-                  _play();
+                  _modeMetronome ? _play() : _toggleMode();
                 },
               ),
             ),
