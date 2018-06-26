@@ -1,16 +1,22 @@
-name: metronome
-description: A new Flutter application.
+name: Metronome
+description: A simple metronome app
 
 dependencies:
   flutter:
     sdk: flutter
 
+  audioplayers: ^0.5.2
   cupertino_icons: ^0.1.0
-  audioplayer: ^0.5.0
+  flutter_launcher_icons: ^0.5.2
   path_provider:
-  quiver: '>=0.29.0 <0.30.0'
+  quiver:
   recase:
 
+flutter_icons:
+  android: true
+  ios: "Metronome-Icon"
+  image_path: "assets/metronome.png"
+  image_path_android: "assets/metronome.png"
 
 dev_dependencies:
   flutter_test:
@@ -18,3 +24,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+  - assets/tamborine.mp3
+  - assets/bottle.mp3
+  - assets/click.mp3
