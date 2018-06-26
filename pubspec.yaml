@@ -14,9 +14,9 @@ dependencies:
 
 flutter_icons:
   android: true
-  ios: "Metronome-Icon"
-  image_path: "assets/metronome.png"
-  image_path_android: "assets/metronome.png"
+  ios: "Beet-Icon"
+  image_path: "assets/beet.png"
+  image_path_android: "assets/beet.png"
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +25,4 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-  - assets/tamborine.mp3
-  - assets/bottle.mp3
-  - assets/click.mp3
+  - assets/

@@ -1,9 +1,11 @@
 import 'dart:async' show Future, StreamSubscription;
 import 'dart:io' show File;
 
-import 'package:audioplayers/audioplayer.dart';
+import 'package:audioplayers/audioplayer.dart' show AudioPlayer;
 import 'package:flutter/material.dart'
-    show BuildContext, Color, Colors, DragUpdateDetails, FlatButton, GestureDetector, MaterialApp, Scaffold, SizedBox, State, StatefulWidget, StatelessWidget, Text, TextStyle, Widget, runApp;
+    show BuildContext, Color, Colors, FlatButton, GestureDetector, MaterialApp,
+    Scaffold, SizedBox, State, StatefulWidget, StatelessWidget, Text, TextStyle,
+    Widget, runApp;
 import 'package:flutter/services.dart' show ByteData, rootBundle;
 import 'package:path_provider/path_provider.dart' show getTemporaryDirectory;
 import 'package:quiver/async.dart' show Metronome;
@@ -38,7 +40,7 @@ class MetronomeState extends State<MetronomeClass> {
   TextStyle _biggerFont = const TextStyle(fontSize: 175.0);
 
   /// List of possible sounds of metronome
-  List<String> sounds = ['bottle', 'click', 'tamborine'
+  List<String> _sounds = ['bottle', 'click', 'tamborine', 'meow'
   ]; // ignore: always_specify_types
   int _soundIndex = 0;
 
@@ -49,20 +51,25 @@ class MetronomeState extends State<MetronomeClass> {
   String displayTxt = '$tempo';
   ReCase _rc;
 
-  //Mode and isPlaying
+  /// Whether the metronome is playing or not
   bool _isPlaying = false;
+
+  /// The current mode
   bool _modeMetronome = true;
 
+  /// Metronome with a tempo
   Metronome _metronome =
-  Metronome.epoch(Duration(milliseconds: (60000 / tempo).round()));
+  Metronome.periodic(Duration(milliseconds: (60000 / tempo).floor()));
+
   StreamSubscription<DateTime> _subscription;
 
-  Future<ByteData> _loadSound() async =>
-      await rootBundle.load('assets/${sounds[_soundIndex]}.mp3');
+  Future<ByteData> _loadSound() async {
+    return await rootBundle.load('assets/${_sounds[_soundIndex]}.mp3');
+  }
 
   void _writeSound() async {
     _soundFile = File(
-        '${(await getTemporaryDirectory()).path}/${sounds[_soundIndex]}.mp3');
+        '${(await getTemporaryDirectory()).path}/${_sounds[_soundIndex]}.mp3');
     await _soundFile.writeAsBytes((await _loadSound()).buffer.asUint8List());
   }
 
@@ -72,7 +79,8 @@ class MetronomeState extends State<MetronomeClass> {
     await _audioPlayer.play(_soundFile.path, isLocal: true);
   }
 
-  void _toggleMode() {
+  /// Toggles between Metronome Mode and Not Metronome Mode
+  void toggleMode() {
     if (_modeMetronome) {
       _modeMetronome = false;
 
@@ -86,7 +94,7 @@ class MetronomeState extends State<MetronomeClass> {
       setState(() {
         _bkgColor = Colors.blue[800];
         _biggerFont = const TextStyle(fontSize: 65.0);
-        _rc = ReCase(sounds[_soundIndex]);
+        _rc = ReCase(_sounds[_soundIndex]);
         displayTxt = _rc.pascalCase;
       });
     }
@@ -101,18 +109,20 @@ class MetronomeState extends State<MetronomeClass> {
     }
   }
 
-  void _switchSound() {
+  /// Switches between the sound options (Not Metronome Mode)
+  void switchSound() {
     //Cycles through possible sounds
-    _soundIndex = ++_soundIndex % 3;
+    _soundIndex = ++_soundIndex % _sounds.length;
     setState(() {
-      _rc = ReCase(sounds[_soundIndex]);
+      _rc = ReCase(_sounds[_soundIndex]);
       displayTxt = _rc.pascalCase;
     });
 
     _writeSound();
   }
 
-  void _play() {
+  /// Plays the sound of the metronome (Metronome Mode)
+  void playMetronome() {
     if (_soundFile == null) {
       _writeSound();
     }
@@ -123,7 +133,7 @@ class MetronomeState extends State<MetronomeClass> {
         _subscription.cancel();
         _isPlaying = false;
 
-        _bkgColor = Colors.red;
+        _bkgColor = Colors.black;
       } else {
         _subscription =
             _metronome.listen((d) =>
@@ -135,14 +145,15 @@ class MetronomeState extends State<MetronomeClass> {
     });
   }
 
-  void _increaseTempo(int decrease) {
+  /// Increases the tempo based on the swipe direction, capping at 40 and 300
+  void increaseTempo(int decrease) {
     if (!((tempo > 299 && decrease < 0) || (tempo < 41 && decrease > 0))) {
       setState(() {
-        tempo -= (decrease / 4).ceil();
+        tempo -= decrease;
         displayTxt = '$tempo';
       });
-      _metronome = Metronome.epoch(
-          Duration(milliseconds: (60000 / tempo).round()));
+      _metronome = Metronome.periodic(
+          Duration(milliseconds: (60000 / tempo).floor()));
 
       //Dynamically increases the tempo of the beat
       if (_isPlaying) {
@@ -168,15 +179,15 @@ class MetronomeState extends State<MetronomeClass> {
               onVerticalDragUpdate: (
                   updateDetails) { // ignore: always_specify_types
                 if (_modeMetronome)
-                  _increaseTempo((updateDetails.primaryDelta / 6).floor());
+                  increaseTempo((updateDetails.primaryDelta / 20).round());
               },
               onHorizontalDragUpdate: (
                   updateDetails) { // ignore: always_specify_types
                 if (_modeMetronome)
-                  _increaseTempo((updateDetails.primaryDelta / 6).floor());
+                  increaseTempo((updateDetails.primaryDelta / 20).round());
               },
 
-              onLongPress: _toggleMode,
+              onLongPress: toggleMode,
 
               //SizedBox.expand means the button takes up the entire screen
               child: SizedBox.expand(
@@ -190,7 +201,7 @@ class MetronomeState extends State<MetronomeClass> {
 
                   //Plays or pauses the metronome if metronome mode, else switches sound
                   onPressed: () {
-                    _modeMetronome ? _play() : _switchSound();
+                    _modeMetronome ? playMetronome() : switchSound();
                   },
                 ),
               ),
