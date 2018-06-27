@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) =>
       MaterialApp(
-      title: 'Metronome',
+        title: 'Beet',
         home: MetronomeClass(),
     );
 }
@@ -35,12 +35,12 @@ class MetronomeState extends State<MetronomeClass> {
   File _soundFile;
 
   //Initial Style
-  Color _bkgColor = Colors.red;
-  final Color _txtColor = Colors.white;
+  Color _bkgColor = Colors.black;
+  Color _txtColor = Colors.white;
   TextStyle _biggerFont = const TextStyle(fontSize: 175.0);
 
   /// List of possible sounds of metronome
-  List<String> _sounds = ['bottle', 'click', 'tamborine', 'meow'
+  final List<String> _sounds = ['bottle', 'click', 'tamborine', 'meow'
   ]; // ignore: always_specify_types
   int _soundIndex = 0;
 
@@ -63,9 +63,8 @@ class MetronomeState extends State<MetronomeClass> {
 
   StreamSubscription<DateTime> _subscription;
 
-  Future<ByteData> _loadSound() async {
-    return await rootBundle.load('assets/${_sounds[_soundIndex]}.mp3');
-  }
+  Future<ByteData> _loadSound() async =>
+      await rootBundle.load('assets/${_sounds[_soundIndex]}.mp3');
 
   void _writeSound() async {
     _soundFile = File(
@@ -92,7 +91,8 @@ class MetronomeState extends State<MetronomeClass> {
 
       //Displays the current sound
       setState(() {
-        _bkgColor = Colors.blue[800];
+        _bkgColor = Colors.white;
+        _txtColor = Colors.black;
         _biggerFont = const TextStyle(fontSize: 65.0);
         _rc = ReCase(_sounds[_soundIndex]);
         displayTxt = _rc.pascalCase;
@@ -100,9 +100,9 @@ class MetronomeState extends State<MetronomeClass> {
     }
     else {
       _modeMetronome = true;
-
       setState(() {
-        _bkgColor = Colors.red;
+        _bkgColor = Colors.black;
+        _txtColor = Colors.white;
         _biggerFont = const TextStyle(fontSize: 175.0);
         displayTxt = '$tempo';
       });
@@ -139,8 +139,7 @@ class MetronomeState extends State<MetronomeClass> {
             _metronome.listen((d) =>
                 _playLocal()); // ignore: always_specify_types
         _isPlaying = true;
-
-        _bkgColor = Colors.green;
+        changeColor();
       }
     });
   }
@@ -161,8 +160,32 @@ class MetronomeState extends State<MetronomeClass> {
         _subscription =
             _metronome.listen((d) =>
                 _playLocal()); // ignore: always_specify_types
+        changeColor();
       }
     }
+    if (tempo > 300) {
+      setState(() {
+        tempo = 300;
+        displayTxt = '$tempo';
+      });
+    }
+    if (tempo < 40) {
+      setState(() {
+        tempo = 40;
+        displayTxt = '$tempo';
+      });
+    }
+  }
+
+  void changeColor() {
+    setState(() {
+      _bkgColor = Color.fromARGB(
+          255,
+          ((tempo - 40) * 255 / 260).floor(),
+          208 - (((tempo - 40) * 255 / 260).floor() - 105).abs(),
+          (221 - ((tempo - 40) * 255 / 260).floor()).abs()
+      );
+    });
   }
 
   @override

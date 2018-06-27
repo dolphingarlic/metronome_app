@@ -5,35 +5,12 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53ae2d71-6a97-46ba-a2bc-0ce36ffd3340" name="Default" comment="Added some assets">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list default="true" id="53ae2d71-6a97-46ba-a2bc-0ce36ffd3340" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/android/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/key.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/metronome.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-1024x1024@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-1024x1024@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-20x20@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-20x20@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-20x20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-20x20@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-20x20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-20x20@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-29x29@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-29x29@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-29x29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-29x29@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-29x29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-29x29@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-40x40@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-40x40@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-40x40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-40x40@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-40x40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-40x40@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-60x60@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-60x60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-60x60@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-76x76@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-76x76@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-76x76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-76x76@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-83.5x83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Metronome-Icon.appiconset/Metronome-Icon-83.5x83.5@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metronome_app_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/metronome_app_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,14 +22,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+            <state relative-caret-position="293">
+              <caret line="174" column="30" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="30" />
               <folding>
-                <element signature="n#!!block;n#MyApp#0" />
+                <element signature="e#0#52#0" expanded="true" />
                 <element signature="n#!!block;n#MetronomeClass#0" />
+                <element signature="e#4897#4907#0" />
               </folding>
             </state>
           </provider>
@@ -61,22 +39,30 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="300">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="71" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="71" />
+            <state relative-caret-position="125">
+              <caret line="51" column="94" selection-start-line="51" selection-start-column="94" selection-end-line="51" selection-end-column="94" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>changeColor</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/android/app</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -97,20 +83,22 @@
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet" />
         <option value="$PROJECT_DIR$/analysis_options.yaml" />
-        <option value="$PROJECT_DIR$/android/app/build.gradle" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/widget_test.dart" />
-        <option value="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/android/key.properties" />
+        <option value="$PROJECT_DIR$/android/app/proguard-rules.pro" />
+        <option value="$PROJECT_DIR$/android/app/build.gradle" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="136" />
-    <option name="y" value="24" />
-    <option name="width" value="1285" />
-    <option name="height" value="744" />
+    <option name="x" value="57" />
+    <option name="y" value="-4" />
+    <option name="width" value="1309" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -255,6 +243,15 @@
             <path>
               <item name="metronome_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="metronome_app" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metronome_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metronome_app" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529989423469</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added some assets">
+      <created>1530020426102</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1530020426102</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -388,8 +392,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-11" width="1311" height="780" extended-state="6" />
-    <editor active="true" />
+    <frame x="57" y="-4" width="1309" height="772" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Android Profiler" order="7" />
@@ -408,15 +411,16 @@
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4996041" weight="0.32917318" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" sideWeight="0.4980206" visible="true" weight="0.31513262" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4980206" weight="0.31513262" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980206" weight="0.32761312" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980206" weight="0.30889237" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49881235" weight="0.32917318" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4996041" weight="0.32917318" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4996041" visible="true" weight="0.32917318" />
       <window_info id="Captures" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22882026" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917318" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Flutter Inspector" order="3" visible="true" weight="0.21456848" />
@@ -425,7 +429,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32917318" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -452,8 +455,9 @@
         <state relative-caret-position="2310">
           <caret line="154" column="33" selection-start-line="154" selection-start-column="33" selection-end-line="154" selection-end-column="33" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -470,8 +474,9 @@
         <state relative-caret-position="840">
           <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -488,8 +493,9 @@
         <state relative-caret-position="1020">
           <caret line="68" column="35" lean-forward="true" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -506,8 +512,9 @@
         <state relative-caret-position="1080">
           <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -524,8 +531,9 @@
         <state relative-caret-position="1500">
           <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -535,8 +543,9 @@
         <state relative-caret-position="15">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -553,8 +562,9 @@
         <state relative-caret-position="150">
           <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -571,8 +581,9 @@
         <state relative-caret-position="2070">
           <caret line="138" column="26" selection-start-line="138" selection-start-column="26" selection-end-line="138" selection-end-column="26" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -589,8 +600,9 @@
         <state relative-caret-position="690">
           <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -607,8 +619,9 @@
         <state relative-caret-position="960">
           <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -625,8 +638,9 @@
         <state relative-caret-position="1605">
           <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -650,8 +664,9 @@
         <state relative-caret-position="450">
           <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -668,8 +683,9 @@
         <state relative-caret-position="195">
           <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -679,8 +695,9 @@
         <state relative-caret-position="195">
           <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
         </state>
       </provider>
@@ -790,13 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="71" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -804,21 +814,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="300">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/key.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="293">
+          <caret line="174" column="30" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="30" />
           <folding>
-            <element signature="n#!!block;n#MyApp#0" />
+            <element signature="e#0#52#0" expanded="true" />
             <element signature="n#!!block;n#MetronomeClass#0" />
+            <element signature="e#4897#4907#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="51" column="94" selection-start-line="51" selection-start-column="94" selection-end-line="51" selection-end-column="94" />
         </state>
       </provider>
     </entry>
